@@ -1,0 +1,7 @@
+dwm.c.orig
+dwm.c.rej
+dwm
+dwm.o
+util.o
+drw.o
+dwm.png
