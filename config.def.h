@@ -76,7 +76,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F2, spawn, {.v = downvol } },
 	{ MODKEY,                       XK_F1,  spawn, {.v = mutevol } },
-	{ MODKEY,                       XK_F3, spawn, {.v = upvol   } },/
+	{ MODKEY,                       XK_F3, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
