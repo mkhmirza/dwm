@@ -74,9 +74,9 @@ static const char *termcmd[]  = { "gnome-terminal", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_F2, spawn, {.v = downvol } },
-	{ MODKEY,                       XK_F1,  spawn, {.v = mutevol } },
-	{ MODKEY,                       XK_F3, spawn, {.v = upvol   } },
+	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute,  spawn, {.v = mutevol } },
+	{ MODKEY,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
