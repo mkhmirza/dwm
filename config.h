@@ -34,7 +34,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = {"   ", "  ","3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {"   ", "  ","  ", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -76,13 +76,18 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "gnome-terminal", NULL };
 // firefox
 static const char *firefox[] = {"firefox", NULL};
-
+// transmission-qt 
+static const char *transmissionQt[] = {"transmission-qt", NULL};
+// pavucontrol
+static const char *pavucontrol[] = {"pavucontrol", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                       XF86XK_AudioMute,  spawn, {.v = mutevol } },
 	{ MODKEY,			XK_f, spawn, {.v = firefox } },
+	{ MODKEY, 			XK_t, spawn, {.v = transmissionQt}},
+	{ MODKEY|ShiftMask,		XK_p, spawn, {.v = pavucontrol}},
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
